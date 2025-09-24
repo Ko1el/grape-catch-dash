@@ -14,7 +14,7 @@ const HUD = ({ grapesCaught, grapesToWin, className }: HUDProps) => {
   return (
     <Card className={cn("p-4 bg-card/80 backdrop-blur-sm border-border/50", className)}>
       <div className="flex items-center justify-between mb-2">
-        <h2 className="text-lg font-bold text-foreground">Grapes Collected</h2>
+        <h2 className="text-lg font-bold text-foreground">Zebrane Winogrona</h2>
         <span className="text-2xl font-bold text-game-grape">
           {grapesCaught}/{grapesToWin}
         </span>
@@ -26,7 +26,7 @@ const HUD = ({ grapesCaught, grapesToWin, className }: HUDProps) => {
       />
       
       <div className="mt-2 text-xs text-muted-foreground text-center">
-        {grapesToWin - grapesCaught} grapes remaining
+        Pozostało {grapesToWin - grapesCaught} winogron
       </div>
     </Card>
   );

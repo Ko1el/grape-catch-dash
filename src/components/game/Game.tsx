@@ -91,14 +91,14 @@ const Game = () => {
             newGrapesCaught++;
             collisionDetected = true;
             toast({
-              title: "Grape caught! 🍇",
-              description: `${newGrapesCaught}/${defaultConfig.grapesToWin} grapes collected`,
+              title: "Winogrono złapane! 🍇",
+              description: `${newGrapesCaught}/${defaultConfig.grapesToWin} winogron zebranych`,
             });
           } else if (obj.type === 'stone' && defaultConfig.penaltyOnStone) {
             newGrapesCaught = Math.max(0, newGrapesCaught - 1);
             toast({
-              title: "Stone hit! 🪨",
-              description: "Lost a grape!",
+              title: "Kamień trafiony! 🪨",
+              description: "Stracono winogrono!",
               variant: "destructive",
             });
           }
@@ -229,7 +229,7 @@ const Game = () => {
 
         {/* Instructions */}
         <div className="absolute top-4 left-4 text-sm text-foreground/60">
-          Use ← → arrow keys or A/D to move
+          Użyj ← → strzałek lub A/D do ruchu
         </div>
       </div>
 

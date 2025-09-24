@@ -15,16 +15,16 @@ const GameOver = ({ grapesCaught, onRestart, className }: GameOverProps) => {
         <div className="mb-6">
           <div className="text-6xl mb-4 animate-pulse-success">🍇</div>
           <h1 className="text-3xl font-bold text-game-success mb-2">
-            Victory!
+            Zwycięstwo!
           </h1>
           <p className="text-lg text-foreground">
-            You collected {grapesCaught} grapes!
+            Zebrałeś {grapesCaught} winogron!
           </p>
         </div>
         
         <div className="mb-6 p-4 bg-game-success/10 rounded-lg border border-game-success/20">
           <p className="text-sm text-muted-foreground">
-            Congratulations on completing the challenge!
+            Gratulacje za ukończenie wyzwania!
           </p>
         </div>
         
@@ -33,7 +33,7 @@ const GameOver = ({ grapesCaught, onRestart, className }: GameOverProps) => {
           size="lg"
           className="bg-game-basket text-background hover:bg-game-basket/90 font-bold px-8"
         >
-          Play Again
+          Zagraj Ponownie
         </Button>
       </Card>
     </div>
