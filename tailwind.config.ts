@@ -47,6 +47,16 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        game: {
+          grape: "hsl(var(--game-grape))",
+          "grape-light": "hsl(var(--game-grape-light))",
+          stone: "hsl(var(--game-stone))",
+          basket: "hsl(var(--game-basket))",
+          "bg-start": "hsl(var(--game-bg-start))",
+          "bg-end": "hsl(var(--game-bg-end))",
+          success: "hsl(var(--game-success))",
+          warning: "hsl(var(--game-warning))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -80,10 +90,60 @@ export default {
             height: "0",
           },
         },
+        "fall": {
+          from: {
+            transform: "translateY(-100px)",
+            opacity: "0",
+          },
+          to: {
+            transform: "translateY(100vh)",
+            opacity: "1",
+          },
+        },
+        "bounce": {
+          "0%, 20%, 53%, 80%, 100%": {
+            transform: "translateY(0)",
+          },
+          "40%, 43%": {
+            transform: "translateY(-8px)",
+          },
+          "70%": {
+            transform: "translateY(-4px)",
+          },
+          "90%": {
+            transform: "translateY(-2px)",
+          },
+        },
+        "shake": {
+          "0%, 100%": {
+            transform: "translateX(0)",
+          },
+          "10%, 30%, 50%, 70%, 90%": {
+            transform: "translateX(-2px)",
+          },
+          "20%, 40%, 60%, 80%": {
+            transform: "translateX(2px)",
+          },
+        },
+        "pulse-success": {
+          "0%, 100%": {
+            opacity: "1",
+            transform: "scale(1)",
+          },
+          "50%": {
+            opacity: "0.8",
+            transform: "scale(1.05)",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fall-slow": "fall linear",
+        "fall-fast": "fall linear",
+        "bounce": "bounce 0.6s ease-in-out",
+        "shake": "shake 0.5s ease-in-out",
+        "pulse-success": "pulse-success 1s ease-in-out infinite",
       },
     },
   },

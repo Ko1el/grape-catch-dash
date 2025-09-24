@@ -1,0 +1,43 @@
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { cn } from '@/lib/utils';
+
+interface GameOverProps {
+  grapesCaught: number;
+  onRestart: () => void;
+  className?: string;
+}
+
+const GameOver = ({ grapesCaught, onRestart, className }: GameOverProps) => {
+  return (
+    <div className={cn("fixed inset-0 bg-background/80 backdrop-blur-sm flex items-center justify-center z-50", className)}>
+      <Card className="p-8 max-w-md mx-4 text-center bg-card border-border animate-bounce">
+        <div className="mb-6">
+          <div className="text-6xl mb-4 animate-pulse-success">🍇</div>
+          <h1 className="text-3xl font-bold text-game-success mb-2">
+            Victory!
+          </h1>
+          <p className="text-lg text-foreground">
+            You collected {grapesCaught} grapes!
+          </p>
+        </div>
+        
+        <div className="mb-6 p-4 bg-game-success/10 rounded-lg border border-game-success/20">
+          <p className="text-sm text-muted-foreground">
+            Congratulations on completing the challenge!
+          </p>
+        </div>
+        
+        <Button 
+          onClick={onRestart}
+          size="lg"
+          className="bg-game-basket text-background hover:bg-game-basket/90 font-bold px-8"
+        >
+          Play Again
+        </Button>
+      </Card>
+    </div>
+  );
+};
+
+export default GameOver;
