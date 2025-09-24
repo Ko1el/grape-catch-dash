@@ -28,6 +28,6 @@ export const defaultConfig: GameConfig = {
   stoneFrequency: 5,
   fruitSpeed: 1.5,
   stoneSpeed: 2.0,
-  basketSpeed: 3.0,
+  basketSpeed: 1.5,
   penaltyOnStone: false,
 };
