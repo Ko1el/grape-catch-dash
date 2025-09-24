@@ -189,8 +189,8 @@ const Game = () => {
   }, [gameLoop, gameState.gameStatus]);
 
   return (
-    <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-game-bg-start to-game-bg-end p-4">
-      <div className="mb-4">
+    <div className="flex flex-col items-center min-h-screen bg-gradient-to-b from-game-bg-start to-game-bg-end p-6">
+      <div className="mb-6">
         <HUD 
           grapesCaught={gameState.grapesCaught} 
           grapesToWin={defaultConfig.grapesToWin}
@@ -228,7 +228,7 @@ const Game = () => {
         <Basket x={gameState.basketX} />
 
         {/* Instructions */}
-        <div className="absolute top-4 left-4 text-sm text-foreground/60">
+        <div className="absolute top-6 left-6 text-sm text-foreground/60 bg-background/20 rounded px-3 py-2">
           Użyj ← → strzałek lub A/D do ruchu
         </div>
       </div>
