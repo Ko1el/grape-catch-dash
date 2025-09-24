@@ -61,7 +61,6 @@ const Game = () => {
     );
   }, []);
 
-  // Game loop
   const gameLoop = useCallback(() => {
     if (gameState.gameStatus !== 'playing') return;
 
@@ -70,12 +69,12 @@ const Game = () => {
     setGameState(prev => {
       let newBasketX = prev.basketX;
       
-      // Handle basket movement
+      // Smooth basket movement - smaller increments for fluidity
       if (keysPressed.current.has('ArrowLeft') || keysPressed.current.has('a')) {
-        newBasketX = Math.max(BASKET_WIDTH / 2, prev.basketX - defaultConfig.basketSpeed);
+        newBasketX = Math.max(BASKET_WIDTH / 2, prev.basketX - defaultConfig.basketSpeed * 0.5);
       }
       if (keysPressed.current.has('ArrowRight') || keysPressed.current.has('d')) {
-        newBasketX = Math.min(GAME_WIDTH - BASKET_WIDTH / 2, prev.basketX + defaultConfig.basketSpeed);
+        newBasketX = Math.min(GAME_WIDTH - BASKET_WIDTH / 2, prev.basketX + defaultConfig.basketSpeed * 0.5);
       }
 
       // Move objects and check collisions

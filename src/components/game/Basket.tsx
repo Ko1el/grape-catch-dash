@@ -11,7 +11,7 @@ const Basket = forwardRef<HTMLDivElement, BasketProps>(({ x, className }, ref) =
     <div
       ref={ref}
       className={cn(
-        "absolute bottom-4 w-16 h-8 bg-game-basket rounded-b-full border-2 border-game-basket transition-all duration-150 ease-out",
+        "absolute bottom-4 w-16 h-8 bg-game-basket rounded-b-full border-2 border-game-basket",
         "shadow-lg shadow-game-basket/30",
         className
       )}
